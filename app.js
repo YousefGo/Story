@@ -2,8 +2,7 @@ var  express = require("express");
 var app = express();
 var  bodyParser =require("body-parser");
 app.use(bodyParser.urlencoded({extended:true}));
-const port =3000||process.env.PORT;
-
+var port = process.env.PORT || 8080;
 app.get("/",(req,res)=>
 {
 res.sendFile(__dirname+"/index.html");
